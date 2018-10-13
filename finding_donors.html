@@ -14161,8 +14161,10 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The Random Forest model is a tool that creates a certain type and amount of predictors, especified by the user, that are later put to learn the underlying "patterns" of subsets of the data.</p>
-<p>In that way, each predictor learns something "new" about it. Once it's done learning, the model itself can predict newer instances of data by simply asking each of the predictors to make a prediction, and, by majority vote of all these, the class of the can be defined. As such, it tends to outperform other models and yield better results in the long run.</p>
+<p><strong>Answer: </strong> The Random Forest model is a tool that creates a certain amount of predictors (especified by the user), called Decision Trees (DT) that are later put to learn the underlying "patterns" of subsets of the data.</p>
+<p>DT, at their very basics, are a ML method that by process of asking and answering "yes or no" questions about the data, they go about splitting the data into smaller and smaller subsets, ultimately learning the underlying structures of the phenomenon at study. Once it does, it can take on new data, and run the same procedure just mentioned in order to classify newer instances.</p>
+<p>So, as opposed to the idea of just using only one DT to learn about the data and make predictions on newer instances, Random Forest takes the approach of "building" a whole "forest" of DTs. In that way, each predictor learns something "new", and the information gained by each individual predictor can later be pooled into forming more robust predictions.</p>
+<p>A Random Forest model, thus, feeds random subsets of the features and the data, to each of the DTs employed so they can learn from it using the process describe above. Once it's done the model can predict newer instances of data by simply asking each of the predictors to make a prediction, and, by majority vote of all of the DT, the class can be defined. As such, it tends to outperform other models and yield better results in the long run.</p>
 
 </div>
 </div>
